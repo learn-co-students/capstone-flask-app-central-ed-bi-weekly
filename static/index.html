@@ -1,47 +1,41 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>First Flask App</title>
+    <title>Example Flask App</title>
     <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
   </head>
   <body>
-    <div class="jumbotron">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Iris Predictor App</h1>
+        <p>Predict the classification of an iris. Farm-to-table sed letterpress quinoa etsy. Art party paleo cray, literally occaecat before they sold out gluten-free
+        tacos stumptown vice chillwave magna taiyaki marfa. Lomo tote bag hexagon activated charcoal, kogi occaecat ut hot
+        chicken bicycle rights freegan. Ennui ea sunt, eiusmod chartreuse nisi food truck drinking vinegar anim vape occupy
+        fingerstache 90's mustache. Scenester church-key offal next level excepteur. Vegan flannel yuccie velit art party. Echo
+        park cardigan sustainable VHS bitters ut eiusmod put a bird on it sartorial.</p>
+      </div>
       <div class="container">
-        <h1 class="display-3">Wine Predictor</h1>
-        <p>
-          Some cool content will go here
-        </p>
-        <p>
-          <form action="/get_results" method="post">
-            <p>Alcohol</p>
-            <input type="text" name="Alcohol" value="12.82">
-            <p>Malic acid</p>
-            <input type="text" name="Malic acid" value="3.37">
-            <p>Ash</p>
-            <input type="text" name="Ash" value="2.3">
-            <p>Alcalinity of ash</p>
-            <input type="text" name="Alcalinity of ash" value="19.5">
-            <p>Magnesium</p>
-            <input type="text" name="Magnesium" value="88.0">
-            <p>Total phenols</p>
-            <input type="text" name="Total phenols" value="1.48">
-            <p>Flavanoids</p>
-            <input type="text" name="Flavanoids" value="0.66">
-            <p>Nonflavanoid phenols</p>
-            <input type="text" name="Nonflavanoid phenols" value="0.4">
-            <p>Proanthocyanins</p>
-            <input type="text" name="Proanthocyanins" value="0.97">
-            <p>Color intensity</p>
-            <input type="text" name="Color intensity" value="10.26">
-            <p>Hue</p>
-            <input type="text" name="Hue" value="0.72">
-            <p>OD280/OD315 of diluted wines</p>
-            <input type="text" name="OD280/OD315 of diluted wines" value="1.75">
-            <p>Proline</p>
-            <input type="text" name="Proline" value="685.0">
-            <br>
+        <form action="/get_results" method="post">
+          <div>
+            <label for="sepal-length">sepal length (cm)</label>
+            <input type="number" name="sepal-length" id="sepal-length" value="6.5">
+          </div>
+          <div>
+            <label for="sepal-width">sepal width (cm)</label>
+            <input type="number" name="sepal-width" id="sepal-width" value="3.0">
+          </div>
+          <div>
+            <label for="petal-length">petal length (cm)</label>
+            <input type="number" name="petal-length" id="petal-length" value="5.2">
+          </div>
+          <div>
+            <label for="petal-width">petal width (cm)</label>
+            <input type="number" name="petal-width" id="petal-width" value="2.0">
+          </div>
+          <div>
             <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
-          </form>
-        </p>
+          </div>
+        </form>
       </div>
     </div>
   </body>

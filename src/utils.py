@@ -2,10 +2,7 @@ def validate_input(data):
     test_value = []
     errors = []
     
-    EXPECTED_FEATURES = ("Alcohol", "Malic acid", "Ash", "Alcalinity of ash",
-                         "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols",
-                         "Proanthocyanins", "Color intensity", "Hue",
-                         "OD280/OD315 of diluted wines", "Proline")
+    EXPECTED_FEATURES = ["sepal-length", "sepal-width", "petal-length", "petal-width"]
     
     if not data:
         errors.append("Form data must not be empty")

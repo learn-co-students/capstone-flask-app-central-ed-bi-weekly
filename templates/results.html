@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>First Flask App Results</title>
+  <head>
+    <title>Example Flask App Results</title>
     <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-</head>
-<body>
-    We predict that this wine is from class {{ predicted_class }}
-    <br>
-
-    <img src="{{ url_for('static', filename='upward_sloping_chart.png') }}" alt="">
-
-    <a href="/">Go back home</a>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Results</h1>
+      </div>
+      <div class="container">
+        <p>
+          We predict that this iris is from class: {{ predicted_class }}
+        </p>
+        <p>
+          {% if predicted_class == 0 %}
+            That is class <em>setosa</em>
+          {% elif predicted_class == 1 %}
+            That is class <em>versicolor</em>
+          {% else %}
+            That is class <em>virginica</em>
+          {% endif %}
+        </p>
+      </div>
+      <div class="container">
+        <a href="/">Go back home</a>
+      </div>
+    </div>
+  </body>
 </html>
