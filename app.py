@@ -12,7 +12,7 @@ def index():
 
 @app.route("/get_results", methods=["POST"])
 def get_results():
-    """ Predict the class of wine based on the inputs. """
+    """ Predict the class of iris based on the inputs. """
     data = request.form
     # you can remove this print statement before deploying
     print(data)

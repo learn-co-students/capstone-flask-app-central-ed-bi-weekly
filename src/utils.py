@@ -1,4 +1,18 @@
 def validate_input(data):
+    """
+    Prepare raw values from HTML form for making ML prediction
+
+    Parameters:
+        data: ImmutableDict of data from the HTML form, representing features
+
+    Returns:
+        test_value: a list floating point numbers representing feature values.
+        The HTML form is assumed to have numeric inputs.  Additional
+        preprocessing may be required if the form contains categorical or text data
+
+        errors: a list of strings representing error messages (which should be
+        empty if the form data was valid)
+    """
     test_value = []
     errors = []
     
